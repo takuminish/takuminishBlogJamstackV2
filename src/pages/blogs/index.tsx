@@ -1,9 +1,10 @@
 import * as React from "react";
-import { graphql, PageProps } from "gatsby";
+import { graphql, PageProps, Link } from "gatsby";
 
 type DataProps = {
   allMarkdownRemark: {
     nodes: {
+      id: string;
       frontmatter: {
         date: string;
         description: string;
@@ -20,7 +21,11 @@ const BlogIndexPage = ({
   return (
     <div>
       {allMarkdownRemark.nodes.map((node) => {
-        return <h1>{node.frontmatter.title}</h1>;
+        return (
+          <Link key={node.id} to={node.id}>
+            {node.frontmatter.title}
+          </Link>
+        );
       })}
     </div>
   );
@@ -30,6 +35,7 @@ export const query = graphql`
   query IndexPageQuery {
     allMarkdownRemark {
       nodes {
+        id
         frontmatter {
           date
           description
