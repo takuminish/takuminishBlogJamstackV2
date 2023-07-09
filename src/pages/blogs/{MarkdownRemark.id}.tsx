@@ -16,6 +16,7 @@ type DataProps = {
 const BlogDetailPage = ({ data: { markdownRemark } }: PageProps<DataProps>) => {
   return (
     <article className="markdown-body">
+      <h1>{markdownRemark.frontmatter.title}</h1>
       <div
         dangerouslySetInnerHTML={{
           __html: markdownRemark.html,
