@@ -77,6 +77,14 @@ const BlogIndexPage = ({
           );
         })}
       </Grid2>
+      <Typography
+        sx={{
+          padding: "12px",
+        }}
+        variant="h2"
+      >
+        Zenn
+      </Typography>
     </>
   );
 };
