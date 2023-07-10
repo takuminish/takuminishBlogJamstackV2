@@ -42,7 +42,7 @@ const BlogIndexPage = ({
       <Grid2 container spacing={3} sx={{ padding: "1rem 3rem 3rem 3rem" }}>
         {allMarkdownRemark.nodes.map((node) => {
           return (
-            <Grid2 xs={12} sm={6} md={4}>
+            <Grid2 key={node.id} xs={12} sm={6} md={4}>
               <Card sx={{ backgroundColor: "#e0efff" }}>
                 <CardContent>
                   <Box
