@@ -85,6 +85,7 @@ const BlogIndexPage = ({
       >
         Zenn
       </Typography>
+      Coming Soon...
     </>
   );
 };
