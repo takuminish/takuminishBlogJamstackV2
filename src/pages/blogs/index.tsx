@@ -57,7 +57,11 @@ const BlogIndexPage = ({
                   >
                     <Box
                       component="span"
-                      sx={{ height: "100%", fontSize: "100px" }}
+                      sx={{
+                        height: "100%",
+                        fontSize: "100px",
+                        lineHeight: "190px",
+                      }}
                     >
                       {node.frontmatter.icon}
                     </Box>
