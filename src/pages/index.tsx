@@ -5,6 +5,7 @@ import Experience from "../features/portfolio/components/Experience";
 import { Box, Typography } from "@mui/material";
 import Skills from "../features/portfolio/components/Skills";
 import Licenses from "../features/portfolio/components/Licenses";
+import Products from "../features/portfolio/components/Products";
 
 export type Experience = {
   detailedInformation: string;
@@ -29,25 +30,35 @@ export type License = {
   isITLicense: boolean;
 };
 
+export type Product = {
+  fieldId: string;
+  name: string;
+  detailedInformation: string;
+  useSkills: string[];
+  productImage: ProductImage;
+};
+
+export type ProductImage = {
+  url: string;
+  height: number;
+  width: number;
+};
+
 type DataProps = {
   microcmsProfile: {
     id: string;
     licenses: License[];
-    products: {
-      fieldId: string;
-      name: string;
-      detailedInformation: string;
-    }[];
-    profile: {
-      fieldId: string;
-      name: string;
-      introduction: string;
-      githubUrl: string;
-      qiitaUrl: string;
-    };
-    skills: Skill[];
-    experiences: Experience[];
+    products: Product[];
+  }[];
+  profile: {
+    fieldId: string;
+    name: string;
+    introduction: string;
+    githubUrl: string;
+    qiitaUrl: string;
   };
+  skills: Skill[];
+  experiences: Experience[];
 };
 
 const BlogIndexPage = ({ data: { microcmsProfile } }: PageProps<DataProps>) => {
@@ -81,6 +92,15 @@ const BlogIndexPage = ({ data: { microcmsProfile } }: PageProps<DataProps>) => {
           </Typography>
           <Licenses licenses={microcmsProfile.licenses} />
         </Box>
+        <Box>
+          <Typography
+            variant="h4"
+            sx={{ fontWeight: 700, textAlign: "center" }}
+          >
+            Products
+          </Typography>
+          <Products products={microcmsProfile.products} />
+        </Box>
       </Box>
     </Layout>
   );
@@ -100,6 +120,12 @@ export const query = graphql`
         fieldId
         name
         detailedInformation
+        useSkills
+        productImage {
+          url
+          height
+          width
+        }
       }
       profile {
         fieldId
