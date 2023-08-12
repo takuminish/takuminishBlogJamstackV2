@@ -30,7 +30,7 @@ function Skills(props: Props) {
       <Typography variant="h5" sx={{ fontWeight: 700, textAlign: "center" }}>
         Framework
       </Typography>
-      <Grid2 container spacing={3} sx={{ padding: "1rem 3rem 3rem 3rem" }}>
+      <Grid2 container spacing={3}>
         {frameworkSkills.map((skill) => (
           <Grid2 key={skill.fieldId} xs={12} sm={6} md={4}>
             <SkillCard skill={skill} />
@@ -41,7 +41,7 @@ function Skills(props: Props) {
       <Typography variant="h5" sx={{ fontWeight: 700, textAlign: "center" }}>
         Language
       </Typography>
-      <Grid2 container spacing={3} sx={{ padding: "1rem 3rem 3rem 3rem" }}>
+      <Grid2 container spacing={3}>
         {languageSkills.map((skill) => (
           <Grid2 key={skill.fieldId} xs={12} sm={6} md={4}>
             <SkillCard skill={skill} />

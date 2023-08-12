@@ -4,6 +4,7 @@ import Layout from "../shared/components/Layout";
 import Experience from "../features/portfolio/components/Experience";
 import { Box, Typography } from "@mui/material";
 import Skills from "../features/portfolio/components/Skills";
+import Licenses from "../features/portfolio/components/Licenses";
 
 export type Experience = {
   detailedInformation: string;
@@ -21,15 +22,17 @@ export type Skill = {
   category: string[];
 };
 
+export type License = {
+  fieldId: string;
+  name: string;
+  passedAt: Date;
+  isITLicense: boolean;
+};
+
 type DataProps = {
   microcmsProfile: {
     id: string;
-    licenses: {
-      fieldId: string;
-      name: string;
-      passedAt: Date;
-      isITLicense: boolean;
-    }[];
+    licenses: License[];
     products: {
       fieldId: string;
       name: string;
@@ -50,17 +53,34 @@ type DataProps = {
 const BlogIndexPage = ({ data: { microcmsProfile } }: PageProps<DataProps>) => {
   return (
     <Layout>
-      <Box>
-        <Typography variant="h4" sx={{ fontWeight: 700, textAlign: "center" }}>
-          Experience
-        </Typography>
-        <Experience experiences={microcmsProfile.experiences} />
-      </Box>
-      <Box>
-        <Typography variant="h4" sx={{ fontWeight: 700, textAlign: "center" }}>
-          Skills
-        </Typography>
-        <Skills skills={microcmsProfile.skills} />
+      <Box sx={{ padding: "1rem 3rem 3rem 3rem" }}>
+        <Box>
+          <Typography
+            variant="h4"
+            sx={{ fontWeight: 700, textAlign: "center" }}
+          >
+            Experience
+          </Typography>
+          <Experience experiences={microcmsProfile.experiences} />
+        </Box>
+        <Box>
+          <Typography
+            variant="h4"
+            sx={{ fontWeight: 700, textAlign: "center" }}
+          >
+            Skills
+          </Typography>
+          <Skills skills={microcmsProfile.skills} />
+        </Box>
+        <Box>
+          <Typography
+            variant="h4"
+            sx={{ fontWeight: 700, textAlign: "center" }}
+          >
+            Licenses
+          </Typography>
+          <Licenses licenses={microcmsProfile.licenses} />
+        </Box>
       </Box>
     </Layout>
   );
