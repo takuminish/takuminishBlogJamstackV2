@@ -73,10 +73,10 @@ const BlogIndexPage = ({ data: { microcmsProfile } }: PageProps<DataProps>) => {
   return (
     <Layout>
       <Box sx={{ padding: "1rem 3rem 3rem 3rem" }}>
-        <Box>
+        <Box sx={{ margin: "16px 0" }}>
           <ProfileComponent profile={microcmsProfile.profile} />
         </Box>
-        <Box>
+        <Box sx={{ margin: "16px 0" }}>
           <Typography
             variant="h4"
             sx={{ fontWeight: 700, textAlign: "center" }}
@@ -85,7 +85,7 @@ const BlogIndexPage = ({ data: { microcmsProfile } }: PageProps<DataProps>) => {
           </Typography>
           <Experience experiences={microcmsProfile.experiences} />
         </Box>
-        <Box>
+        <Box sx={{ margin: "16px 0" }}>
           <Typography
             variant="h4"
             sx={{ fontWeight: 700, textAlign: "center" }}
@@ -94,7 +94,7 @@ const BlogIndexPage = ({ data: { microcmsProfile } }: PageProps<DataProps>) => {
           </Typography>
           <Skills skills={microcmsProfile.skills} />
         </Box>
-        <Box>
+        <Box sx={{ margin: "16px 0" }}>
           <Typography
             variant="h4"
             sx={{ fontWeight: 700, textAlign: "center" }}
@@ -103,7 +103,7 @@ const BlogIndexPage = ({ data: { microcmsProfile } }: PageProps<DataProps>) => {
           </Typography>
           <Licenses licenses={microcmsProfile.licenses} />
         </Box>
-        <Box>
+        <Box sx={{ margin: "16px 0" }}>
           <Typography
             variant="h4"
             sx={{ fontWeight: 700, textAlign: "center" }}
