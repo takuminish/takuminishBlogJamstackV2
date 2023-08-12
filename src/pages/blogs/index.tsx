@@ -47,7 +47,6 @@ export const query = graphql`
           date
           description
           title
-          icon
         }
       }
     }
