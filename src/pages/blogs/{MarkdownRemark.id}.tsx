@@ -54,11 +54,11 @@ const BlogDetailPage = ({ data: { markdownRemark } }: PageProps<DataProps>) => {
           </ValueWrapper>
         </Box>
         <article className="markdown-body">
-          <div
+          <span
             dangerouslySetInnerHTML={{
               __html: markdownRemark.html,
             }}
-          ></div>
+          ></span>
         </article>
       </Box>
     </Layout>

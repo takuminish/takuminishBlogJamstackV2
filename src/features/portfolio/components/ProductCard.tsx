@@ -25,11 +25,11 @@ function ProductCard(props: Props) {
           {product.name}
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          <div
+          <span
             dangerouslySetInnerHTML={{
               __html: product.detailedInformation,
             }}
-          ></div>
+          ></span>
         </Typography>
         <Box
           sx={{

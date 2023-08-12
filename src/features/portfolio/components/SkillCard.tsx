@@ -17,9 +17,9 @@ function SkillCard(props: Props) {
         {skill.name}
       </Typography>
       <Typography variant="body1">
-        <div
+        <span
           dangerouslySetInnerHTML={{ __html: skill.detailedInfomation }}
-        ></div>
+        ></span>
       </Typography>
     </Paper>
   );
