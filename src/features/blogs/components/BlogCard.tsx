@@ -9,6 +9,8 @@ import Category from "../../../shared/components/Category";
 import DateText from "./DateText";
 import Tag from "../../../shared/components/Tag";
 import { BlogMetaData } from "../types";
+import { Link } from "gatsby";
+import Button from "@mui/material/Button";
 
 type Props = {
   metaData: BlogMetaData;
@@ -16,9 +18,10 @@ type Props = {
 
 function BlogCard(props: Props) {
   const { metaData } = props;
+
   return (
     <Card sx={{ backgroundColor: "#fffff" }}>
-      <CardActionArea href={metaData.id}>
+      <CardActionArea LinkComponent={Link} href={metaData.id}>
         <CardContent>
           <ValueWrapper>
             <Typography variant="h6">{metaData.frontmatter.title}</Typography>
