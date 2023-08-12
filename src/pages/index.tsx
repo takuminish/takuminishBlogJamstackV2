@@ -6,6 +6,7 @@ import { Box, Typography } from "@mui/material";
 import Skills from "../features/portfolio/components/Skills";
 import Licenses from "../features/portfolio/components/Licenses";
 import Products from "../features/portfolio/components/Products";
+import { default as ProfileComponent } from "../features/portfolio/components/Profile";
 
 export type Experience = {
   detailedInformation: string;
@@ -44,27 +45,37 @@ export type ProductImage = {
   width: number;
 };
 
+export type Profile = {
+  fieldId: string;
+  name: string;
+  introduction: string;
+  githubUrl: string;
+  qiitaUrl: string;
+  profileImage: {
+    url: string;
+    height: number;
+    width: number;
+  };
+};
+
 type DataProps = {
   microcmsProfile: {
     id: string;
     licenses: License[];
     products: Product[];
-  }[];
-  profile: {
-    fieldId: string;
-    name: string;
-    introduction: string;
-    githubUrl: string;
-    qiitaUrl: string;
+    profile: Profile;
+    skills: Skill[];
+    experiences: Experience[];
   };
-  skills: Skill[];
-  experiences: Experience[];
 };
 
 const BlogIndexPage = ({ data: { microcmsProfile } }: PageProps<DataProps>) => {
   return (
     <Layout>
       <Box sx={{ padding: "1rem 3rem 3rem 3rem" }}>
+        <Box>
+          <ProfileComponent profile={microcmsProfile.profile} />
+        </Box>
         <Box>
           <Typography
             variant="h4"
@@ -133,6 +144,11 @@ export const query = graphql`
         introduction
         githubUrl
         qiitaUrl
+        profileImage {
+          url
+          height
+          width
+        }
       }
       skills {
         fieldId
