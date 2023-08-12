@@ -27,7 +27,7 @@ function BlogCard(props: Props) {
             </Typography>
           </ValueWrapper>
           <ValueWrapper>
-            <Category text="カテゴリー" />
+            <Category text={metaData.frontmatter.category} />
             <Box
               sx={{
                 display: "flex",
@@ -35,7 +35,9 @@ function BlogCard(props: Props) {
                 gap: "5px",
               }}
             >
-              <Tag text="タグ" />
+              {metaData.frontmatter.tags.map((tag) => (
+                <Tag text={tag} />
+              ))}
             </Box>
           </ValueWrapper>
           <ValueWrapper>

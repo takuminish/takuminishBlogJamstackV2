@@ -6,17 +6,10 @@ import Typography from "@mui/material/Typography";
 import DateText from "../../features/blogs/components/DateText";
 import Category from "../../shared/components/Category";
 import Tag from "../../shared/components/Tag";
+import { Blog } from "../../features/blogs/types";
 
 type DataProps = {
-  markdownRemark: {
-    id: string;
-    frontmatter: {
-      date: string;
-      description: string;
-      title: string;
-    };
-    html: string;
-  };
+  markdownRemark: Blog;
 };
 
 const BlogDetailPage = ({ data: { markdownRemark } }: PageProps<DataProps>) => {
@@ -38,7 +31,7 @@ const BlogDetailPage = ({ data: { markdownRemark } }: PageProps<DataProps>) => {
           </Typography>
         </ValueWrapper>
         <ValueWrapper>
-          <Category text="カテゴリー" />
+          <Category text={markdownRemark.frontmatter.category} />
           <Box
             sx={{
               display: "flex",
@@ -46,7 +39,9 @@ const BlogDetailPage = ({ data: { markdownRemark } }: PageProps<DataProps>) => {
               gap: "5px",
             }}
           >
-            <Tag text="タグ" />
+            {markdownRemark.frontmatter.tags.map((tag) => (
+              <Tag text={tag} />
+            ))}
           </Box>
         </ValueWrapper>
         <ValueWrapper>
@@ -75,6 +70,8 @@ export const query = graphql`
         date
         description
         title
+        category
+        tags
       }
       html
     }
