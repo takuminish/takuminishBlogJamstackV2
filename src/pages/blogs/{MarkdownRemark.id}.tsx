@@ -7,6 +7,7 @@ import DateText from "../../features/blogs/components/DateText";
 import Category from "../../shared/components/Category";
 import Tag from "../../shared/components/Tag";
 import { Blog } from "../../features/blogs/types";
+import Layout from "../../shared/components/Layout";
 
 type DataProps = {
   markdownRemark: Blog;
@@ -14,51 +15,53 @@ type DataProps = {
 
 const BlogDetailPage = ({ data: { markdownRemark } }: PageProps<DataProps>) => {
   return (
-    <Box
-      sx={{
-        margin: "auto",
-        display: "flex",
-        justifyContent: "center",
-        flexDirection: "column",
-        padding: "1rem 3rem 3rem 3rem",
-        width: "80%",
-      }}
-    >
-      <Box sx={{ width: "100%", textAlign: "center" }}>
-        <ValueWrapper>
-          <Typography variant="h3" sx={{ fontWeight: 700 }}>
-            {markdownRemark.frontmatter.title}
-          </Typography>
-        </ValueWrapper>
-        <ValueWrapper>
-          <Category text={markdownRemark.frontmatter.category} />
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              gap: "5px",
+    <Layout>
+      <Box
+        sx={{
+          margin: "auto",
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          padding: "1rem 3rem 3rem 3rem",
+          width: "80%",
+        }}
+      >
+        <Box sx={{ width: "100%", textAlign: "center" }}>
+          <ValueWrapper>
+            <Typography variant="h3" sx={{ fontWeight: 700 }}>
+              {markdownRemark.frontmatter.title}
+            </Typography>
+          </ValueWrapper>
+          <ValueWrapper>
+            <Category text={markdownRemark.frontmatter.category} />
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                gap: "5px",
+              }}
+            >
+              {markdownRemark.frontmatter.tags.map((tag) => (
+                <Tag text={tag} />
+              ))}
+            </Box>
+          </ValueWrapper>
+          <ValueWrapper>
+            <DateText
+              label="createdAt"
+              date={new Date(markdownRemark.frontmatter.date)}
+            />
+          </ValueWrapper>
+        </Box>
+        <article className="markdown-body">
+          <div
+            dangerouslySetInnerHTML={{
+              __html: markdownRemark.html,
             }}
-          >
-            {markdownRemark.frontmatter.tags.map((tag) => (
-              <Tag text={tag} />
-            ))}
-          </Box>
-        </ValueWrapper>
-        <ValueWrapper>
-          <DateText
-            label="createdAt"
-            date={new Date(markdownRemark.frontmatter.date)}
-          />
-        </ValueWrapper>
+          ></div>
+        </article>
       </Box>
-      <article className="markdown-body">
-        <div
-          dangerouslySetInnerHTML={{
-            __html: markdownRemark.html,
-          }}
-        ></div>
-      </article>
-    </Box>
+    </Layout>
   );
 };
 

@@ -4,6 +4,7 @@ import { Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { BlogMetaData } from "../../features/blogs/types";
 import BlogCard from "../../features/blogs/components/BlogCard";
+import Layout from "../../shared/components/Layout";
 
 type DataProps = {
   allMarkdownRemark: {
@@ -15,7 +16,7 @@ const BlogIndexPage = ({
   data: { allMarkdownRemark },
 }: PageProps<DataProps>) => {
   return (
-    <>
+    <Layout>
       <Typography
         sx={{
           padding: "12px",
@@ -34,7 +35,7 @@ const BlogIndexPage = ({
           );
         })}
       </Grid2>
-    </>
+    </Layout>
   );
 };
 
