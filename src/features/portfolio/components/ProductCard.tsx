@@ -39,7 +39,7 @@ function ProductCard(props: Props) {
           }}
         >
           {product.useSkills.map((skill) => (
-            <Tag text={skill} />
+            <Tag key={skill} text={skill} />
           ))}
         </Box>
       </CardContent>

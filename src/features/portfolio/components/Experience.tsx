@@ -18,7 +18,7 @@ function History(props: Props) {
   return (
     <Timeline position="alternate">
       {experiences.map((experience) => (
-        <TimelineItem>
+        <TimelineItem key={experience.title}>
           <TimelineSeparator
             sx={{
               margin: "0 7px",
