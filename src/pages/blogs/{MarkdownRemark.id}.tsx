@@ -1,5 +1,6 @@
 import * as React from "react";
 import { graphql, PageProps } from "gatsby";
+import Box from "@mui/material/Box";
 
 type DataProps = {
   markdownRemark: {
@@ -15,14 +16,24 @@ type DataProps = {
 
 const BlogDetailPage = ({ data: { markdownRemark } }: PageProps<DataProps>) => {
   return (
-    <article className="markdown-body">
-      <h1>{markdownRemark.frontmatter.title}</h1>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: markdownRemark.html,
-        }}
-      ></div>
-    </article>
+    <Box
+      sx={{
+        margin: "auto",
+        display: "flex",
+        justifyContent: "center",
+        padding: "1rem 3rem 3rem 3rem",
+        width: "80%",
+      }}
+    >
+      <article className="markdown-body">
+        <h1>{markdownRemark.frontmatter.title}</h1>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: markdownRemark.html,
+          }}
+        ></div>
+      </article>
+    </Box>
   );
 };
 
