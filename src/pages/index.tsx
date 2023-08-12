@@ -3,6 +3,7 @@ import { graphql, PageProps } from "gatsby";
 import Layout from "../shared/components/Layout";
 import Experience from "../features/portfolio/components/Experience";
 import { Box, Typography } from "@mui/material";
+import Skills from "../features/portfolio/components/Skills";
 
 export type Experience = {
   detailedInformation: string;
@@ -11,6 +12,15 @@ export type Experience = {
   startAt: string;
   title: string;
 };
+
+export type Skill = {
+  fieldId: string;
+  name: string;
+  detailedInfomation: string;
+  yearOfExperience: number;
+  category: string[];
+};
+
 type DataProps = {
   microcmsProfile: {
     id: string;
@@ -32,12 +42,7 @@ type DataProps = {
       githubUrl: string;
       qiitaUrl: string;
     };
-    skills: {
-      fieldId: string;
-      name: string;
-      detailedInfomation: string;
-      yearOfExperience: number;
-    }[];
+    skills: Skill[];
     experiences: Experience[];
   };
 };
@@ -50,6 +55,12 @@ const BlogIndexPage = ({ data: { microcmsProfile } }: PageProps<DataProps>) => {
           Experience
         </Typography>
         <Experience experiences={microcmsProfile.experiences} />
+      </Box>
+      <Box>
+        <Typography variant="h4" sx={{ fontWeight: 700, textAlign: "center" }}>
+          Skills
+        </Typography>
+        <Skills skills={microcmsProfile.skills} />
       </Box>
     </Layout>
   );
@@ -82,6 +93,7 @@ export const query = graphql`
         name
         detailedInfomation
         yearOfExperience
+        category
       }
       experiences {
         fieldId
