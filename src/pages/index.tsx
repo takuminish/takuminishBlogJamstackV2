@@ -1,5 +1,6 @@
 import * as React from "react";
 import { graphql, PageProps } from "gatsby";
+import Layout from "../shared/components/Layout";
 
 type DataProps = {
   allMarkdownRemark: {
@@ -18,11 +19,13 @@ const BlogIndexPage = ({
   data: { allMarkdownRemark },
 }: PageProps<DataProps>) => {
   return (
-    <div>
-      {allMarkdownRemark.nodes.map((node) => {
-        return <h1>{node.frontmatter.title}</h1>;
-      })}
-    </div>
+    <Layout>
+      <div>
+        {allMarkdownRemark.nodes.map((node) => {
+          return <h1>{node.frontmatter.title}</h1>;
+        })}
+      </div>
+    </Layout>
   );
 };
 

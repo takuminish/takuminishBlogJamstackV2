@@ -19,6 +19,14 @@ const config: GatsbyConfig = {
     },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/ 
+        }
+      }
+    }
   ],
 }
 
