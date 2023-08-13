@@ -4,7 +4,10 @@
 #
 name: Deploy Gatsby site to Pages
 
+
 on:
+  repository_dispatch:
+    types: [update_profile]
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
