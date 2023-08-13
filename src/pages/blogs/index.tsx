@@ -47,7 +47,10 @@ export function Head() {
       <meta name="description" content="takuminishのBlogです。" />
       <meta property="og:title" content="takuminish's Blogs" />
       <meta property="og:description" content="takuminish's Blogs" />
-      <meta property="og:image" content={ogp} />
+      <meta
+        property="og:image"
+        content={`https://takuminish.github.io/${ogp}`}
+      />
       <meta name="twitter:card" content="summary_large_image" />
     </>
   );
