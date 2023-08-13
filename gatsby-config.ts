@@ -21,6 +21,7 @@ const config: GatsbyConfig = {
         path: `${__dirname}/content/blog`,
       },
     },
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
