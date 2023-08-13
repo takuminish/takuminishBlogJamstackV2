@@ -12,7 +12,7 @@ type Props = {
   experiences: Experience[];
 };
 
-function History(props: Props) {
+function Experience(props: Props) {
   const { experiences } = props;
 
   return (
@@ -46,4 +46,4 @@ function History(props: Props) {
   );
 }
 
-export default History;
+export default Experience;

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { graphql, PageProps } from "gatsby";
 import Layout from "../shared/components/Layout";
-import Experience from "../features/portfolio/components/Experience";
+import { default as ExperienceComponent } from "../features/portfolio/components/Experience";
 import { Box, Typography } from "@mui/material";
 import Skills from "../features/portfolio/components/Skills";
 import Licenses from "../features/portfolio/components/Licenses";
@@ -84,7 +84,7 @@ const BlogIndexPage = ({ data: { microcmsProfile } }: PageProps<DataProps>) => {
           >
             Experience
           </Typography>
-          <Experience experiences={microcmsProfile.experiences} />
+          <ExperienceComponent experiences={microcmsProfile.experiences} />
         </ProfileWrapper>
         <ProfileWrapper>
           <Typography
