@@ -25,6 +25,7 @@
     "@tanstack/router": "^0.0.1-beta.99",
     "date-fns": "^2.30.0",
     "gatsby": "^5.11.0",
+    "gatsby-plugin-force-file-loader": "^5.0.1",
     "gatsby-plugin-react-svg": "^3.3.0",
     "gatsby-plugin-sharp": "^5.11.0",
     "gatsby-remark-images": "^7.11.0",

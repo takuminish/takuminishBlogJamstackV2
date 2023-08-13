@@ -24,6 +24,12 @@ const config: GatsbyConfig = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: 'gatsby-plugin-force-file-loader',
+      options: {
+        /* gatsby-plugin-force-file-loader options here */
+      }
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -40,7 +46,7 @@ const config: GatsbyConfig = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets/ 
+          include: /svg/ 
         }
       }
     },
