@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import { Link } from "gatsby";
 import React from "react";
-import Logo from "../../assets/Logo.svg";
+import Logo from "../../assets/svg/Logo.svg";
 
 function Header() {
   return (

@@ -5,6 +5,7 @@ import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { BlogMetaData } from "../../features/blogs/types";
 import BlogCard from "../../features/blogs/components/BlogCard";
 import Layout from "../../shared/components/Layout";
+import ogp from "../../assets/image/takuminish-portfolio-blogs-ogp.png";
 
 type DataProps = {
   allMarkdownRemark: {
@@ -38,6 +39,19 @@ const BlogIndexPage = ({
     </Layout>
   );
 };
+
+export function Head() {
+  return (
+    <>
+      <title>takuminish's Blogs</title>
+      <meta name="description" content="takuminishのBlogです。" />
+      <meta property="og:title" content="takuminish's Blogs" />
+      <meta property="og:description" content="takuminish's Blogs" />
+      <meta property="og:image" content={ogp} />
+      <meta name="twitter:card" content="summary_large_image" />
+    </>
+  );
+}
 
 export const query = graphql`
   query IndexPageQuery {

@@ -8,6 +8,7 @@ import Licenses from "../features/portfolio/components/Licenses";
 import Products from "../features/portfolio/components/Products";
 import { default as ProfileComponent } from "../features/portfolio/components/Profile";
 import ProfileWrapper from "../features/portfolio/components/ProfileWrapper";
+import ogp from "../assets/image/takuminish-portfolio-ogp.png";
 
 export type Experience = {
   detailedInformation: string;
@@ -117,6 +118,22 @@ const BlogIndexPage = ({ data: { microcmsProfile } }: PageProps<DataProps>) => {
     </Layout>
   );
 };
+
+export function Head() {
+  return (
+    <>
+      <title>takuminish's Portfolio</title>
+      <meta
+        name="description"
+        content="takuminishのポートフォリオ+個人ブログサイトです。経歴やスキル、取得済み資格等をまとめています。"
+      />
+      <meta property="og:title" content="takuminish's Portfolio" />
+      <meta property="og:description" content="takuminish's Portfolio" />
+      <meta property="og:image" content={ogp} />
+      <meta name="twitter:card" content="summary_large_image" />
+    </>
+  );
+}
 
 export const query = graphql`
   query MicroCMSProfileQuery {

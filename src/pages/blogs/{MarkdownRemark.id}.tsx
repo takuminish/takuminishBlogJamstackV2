@@ -8,6 +8,7 @@ import Category from "../../shared/components/Category";
 import Tag from "../../shared/components/Tag";
 import { Blog } from "../../features/blogs/types";
 import Layout from "../../shared/components/Layout";
+import ogp from "../../assets/image/takuminish-portfolio-blogs-ogp.png";
 
 type DataProps = {
   markdownRemark: Blog;
@@ -64,6 +65,19 @@ const BlogDetailPage = ({ data: { markdownRemark } }: PageProps<DataProps>) => {
     </Layout>
   );
 };
+
+export function Head() {
+  return (
+    <>
+      <title>takuminish's Blog</title>
+      <meta name="description" content="takuminishのBlogです。" />
+      <meta property="og:title" content="takuminish's Blog" />
+      <meta property="og:description" content="takuminish's Blog" />
+      <meta property="og:image" content={ogp} />
+      <meta name="twitter:card" content="summary_large_image" />
+    </>
+  );
+}
 
 export const query = graphql`
   query ($id: String) {
