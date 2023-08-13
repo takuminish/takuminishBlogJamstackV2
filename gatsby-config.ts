@@ -4,6 +4,7 @@ require("dotenv").config({
 })
 
 const config: GatsbyConfig = {
+  pathPrefix: '/takuminishBlogJamstackV2',
   siteMetadata: {
     title: `Takuminish Blog V2`,
     siteUrl: `https://www.yourdomain.tld`,
