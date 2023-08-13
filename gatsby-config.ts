@@ -20,8 +20,20 @@ const config: GatsbyConfig = {
         path: `${__dirname}/content/blog`,
       },
     },
-    `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -42,7 +54,7 @@ const config: GatsbyConfig = {
           },
         ],
       },
-    }
+    },
   ],
 }
 
