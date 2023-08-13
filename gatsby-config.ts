@@ -1,4 +1,7 @@
 import type { GatsbyConfig } from "gatsby"
+require("dotenv").config({
+  path: ".env",
+})
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -26,6 +29,19 @@ const config: GatsbyConfig = {
           include: /assets/ 
         }
       }
+    },
+    {
+      resolve: "gatsby-source-microcms",
+      options: {
+        apiKey: "2E5Yy5u9pqBLfw4NPFS36Xs4vhaJjIOrPhAn",
+        serviceId: 'takuminish-blog-jamstack',
+        apis: [
+          {
+            endpoint: "profile",
+            format: 'object',
+          },
+        ],
+      },
     }
   ],
 }
