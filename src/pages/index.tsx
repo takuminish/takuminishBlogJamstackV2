@@ -7,6 +7,7 @@ import Skills from "../features/portfolio/components/Skills";
 import Licenses from "../features/portfolio/components/Licenses";
 import Products from "../features/portfolio/components/Products";
 import { default as ProfileComponent } from "../features/portfolio/components/Profile";
+import ProfileWrapper from "../features/portfolio/components/ProfileWrapper";
 
 export type Experience = {
   detailedInformation: string;
@@ -73,10 +74,10 @@ const BlogIndexPage = ({ data: { microcmsProfile } }: PageProps<DataProps>) => {
   return (
     <Layout>
       <Box sx={{ padding: "1rem 3rem 3rem 3rem" }}>
-        <Box sx={{ margin: "16px 0" }}>
+        <ProfileWrapper>
           <ProfileComponent profile={microcmsProfile.profile} />
-        </Box>
-        <Box sx={{ margin: "16px 0" }}>
+        </ProfileWrapper>
+        <ProfileWrapper>
           <Typography
             variant="h4"
             sx={{ fontWeight: 700, textAlign: "center" }}
@@ -84,8 +85,8 @@ const BlogIndexPage = ({ data: { microcmsProfile } }: PageProps<DataProps>) => {
             Experience
           </Typography>
           <Experience experiences={microcmsProfile.experiences} />
-        </Box>
-        <Box sx={{ margin: "16px 0" }}>
+        </ProfileWrapper>
+        <ProfileWrapper>
           <Typography
             variant="h4"
             sx={{ fontWeight: 700, textAlign: "center" }}
@@ -93,8 +94,8 @@ const BlogIndexPage = ({ data: { microcmsProfile } }: PageProps<DataProps>) => {
             Skills
           </Typography>
           <Skills skills={microcmsProfile.skills} />
-        </Box>
-        <Box sx={{ margin: "16px 0" }}>
+        </ProfileWrapper>
+        <ProfileWrapper>
           <Typography
             variant="h4"
             sx={{ fontWeight: 700, textAlign: "center" }}
@@ -102,8 +103,8 @@ const BlogIndexPage = ({ data: { microcmsProfile } }: PageProps<DataProps>) => {
             Licenses
           </Typography>
           <Licenses licenses={microcmsProfile.licenses} />
-        </Box>
-        <Box sx={{ margin: "16px 0" }}>
+        </ProfileWrapper>
+        <ProfileWrapper>
           <Typography
             variant="h4"
             sx={{ fontWeight: 700, textAlign: "center" }}
@@ -111,7 +112,7 @@ const BlogIndexPage = ({ data: { microcmsProfile } }: PageProps<DataProps>) => {
             Products
           </Typography>
           <Products products={microcmsProfile.products} />
-        </Box>
+        </ProfileWrapper>
       </Box>
     </Layout>
   );
