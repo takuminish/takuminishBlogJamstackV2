@@ -3,7 +3,6 @@ import { Skill } from "../../../pages";
 import React from "react";
 import Box from "@mui/material/Box";
 import Grid2 from "@mui/material/Unstable_Grid2";
-import Paper from "@mui/material/Paper";
 import SkillCard from "./SkillCard";
 
 type Props = {
