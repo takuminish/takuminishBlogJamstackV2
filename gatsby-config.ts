@@ -1,7 +1,5 @@
 import type { GatsbyConfig } from "gatsby"
-require("dotenv").config({
-  path: ".env",
-})
+require("dotenv").config();
 
 const config: GatsbyConfig = {
   pathPrefix: '/takuminishBlogJamstackV2',
@@ -53,7 +51,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-source-microcms",
       options: {
-        apiKey: "2E5Yy5u9pqBLfw4NPFS36Xs4vhaJjIOrPhAn",
+        apiKey: process.env.MICROCMS_APIKEY,
         serviceId: 'takuminish-blog-jamstack',
         apis: [
           {
