@@ -44,7 +44,7 @@ const BlogDetailPage = ({ data: { markdownRemark } }: PageProps<DataProps>) => {
               }}
             >
               {markdownRemark.frontmatter.tags.map((tag) => (
-                <Tag text={tag} />
+                <Tag key={tag} text={tag} />
               ))}
             </Box>
           </ValueWrapper>
