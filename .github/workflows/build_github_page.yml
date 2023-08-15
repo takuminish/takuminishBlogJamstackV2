@@ -10,7 +10,6 @@ on:
     types: [update_profile]
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -91,6 +90,7 @@ jobs:
 
   # Deployment job
   deploy:
+    if: github.ref_name == 'main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
