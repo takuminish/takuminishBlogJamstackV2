@@ -82,6 +82,4 @@ OK🙆
 ```
   
 # 参考
-- [gatsby-transformer-sharp | Gatsby](https://www.gatsbyjs.com/plugins/gatsby-transformer-sharp/)
-- [Gatsbyでブログ作る⑤〜エラー集](https://totolog34.com/924/)
-- [gatsbyjs Issue](https://github.com/gatsbyjs/gatsby/issues/15625)
+- [gatsbyjs Issue](https://github.com/gatsbyjs/gatsby/issues/11040)
