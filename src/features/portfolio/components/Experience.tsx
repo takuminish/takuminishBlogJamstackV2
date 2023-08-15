@@ -8,7 +8,7 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import { format } from "date-fns";
 import { Experience as ExperienceType } from "../../../pages";
 
-type Props = {
+export type Props = {
   experiences: ExperienceType[];
 };
 

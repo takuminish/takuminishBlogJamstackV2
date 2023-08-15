@@ -1,0 +1,40 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`snapshot 1`] = `
+<div>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-kql80c-MuiPaper-root-MuiAppBar-root"
+  >
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthXl css-19r6kue-MuiContainer-root"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-regular css-r6ewbb-MuiToolbar-root"
+      >
+        <div
+          class="MuiBox-root css-0"
+        >
+          <test-file-stub />
+        </div>
+        <div
+          class="MuiBox-root css-14j8yx0"
+        >
+          <a
+            aria-current="page"
+            class="MuiTypography-root MuiTypography-h5 css-ewn5el-MuiTypography-root"
+            href="/"
+          >
+            Takuminish.dev
+          </a>
+          <a
+            class="MuiTypography-root MuiTypography-h6 css-1au34hm-MuiTypography-root"
+            href="/blogs"
+          >
+            Blogs
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+`;

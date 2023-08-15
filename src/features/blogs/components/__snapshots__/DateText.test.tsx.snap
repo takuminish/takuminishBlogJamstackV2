@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`snapshot 1`] = `
+<div>
+  <p
+    class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+  >
+    公開日
+    : 
+    2021/06/13
+  </p>
+</div>
+`;

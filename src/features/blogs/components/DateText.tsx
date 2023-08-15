@@ -2,7 +2,7 @@ import Typography from "@mui/material/Typography";
 import { formatInTimeZone } from "date-fns-tz";
 import React from "react";
 
-type Props = {
+export type Props = {
   label: string;
   date: Date;
 };

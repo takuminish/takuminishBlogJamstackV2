@@ -3,7 +3,7 @@ import { Skill } from "../../../pages";
 import Typography from "@mui/material/Typography";
 import React from "react";
 
-type Props = {
+export type Props = {
   skill: Skill;
 };
 

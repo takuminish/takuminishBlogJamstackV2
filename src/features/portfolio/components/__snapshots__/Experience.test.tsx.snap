@@ -1,0 +1,58 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`snapshot 1`] = `
+<div>
+  <ul
+    class="MuiTimeline-root MuiTimeline-positionAlternate css-55vwbm-MuiTimeline-root"
+  >
+    <li
+      class="MuiTimelineItem-root MuiTimelineItem-positionAlternate MuiTimelineItem-missingOppositeContent css-1v6o2d9-MuiTimelineItem-root"
+    >
+      <div
+        class="MuiTimelineSeparator-root css-jw6nla-MuiTimelineSeparator-root"
+      >
+        <span
+          class="MuiTimelineDot-root MuiTimelineDot-outlined MuiTimelineDot-outlinedSuccess css-sk7zve-MuiTimelineDot-root"
+        />
+        <span
+          class="MuiTimelineConnector-root css-1kdfyxn-MuiTimelineConnector-root"
+        />
+      </div>
+      <div
+        class="MuiTypography-root MuiTypography-body1 MuiTimelineContent-root MuiTimelineContent-positionAlternate css-1vbfgko-MuiTypography-root-MuiTimelineContent-root"
+      >
+        experience1
+         
+        2015/04/01
+         ~
+         
+        2019/03/31
+      </div>
+    </li>
+    <li
+      class="MuiTimelineItem-root MuiTimelineItem-positionAlternate MuiTimelineItem-missingOppositeContent css-1v6o2d9-MuiTimelineItem-root"
+    >
+      <div
+        class="MuiTimelineSeparator-root css-jw6nla-MuiTimelineSeparator-root"
+      >
+        <span
+          class="MuiTimelineDot-root MuiTimelineDot-outlined MuiTimelineDot-outlinedSuccess css-sk7zve-MuiTimelineDot-root"
+        />
+        <span
+          class="MuiTimelineConnector-root css-1kdfyxn-MuiTimelineConnector-root"
+        />
+      </div>
+      <div
+        class="MuiTypography-root MuiTypography-body1 MuiTimelineContent-root MuiTimelineContent-positionAlternate css-1vbfgko-MuiTypography-root-MuiTimelineContent-root"
+      >
+        experience2
+         
+        2015/04/01
+         ~
+         
+        2019/03/31
+      </div>
+    </li>
+  </ul>
+</div>
+`;

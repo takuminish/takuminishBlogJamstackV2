@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import SkillCard from "./SkillCard";
 
-type Props = {
+export type Props = {
   skills: Skill[];
 };
 

@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import LicenseTable from "./LicenseTable";
 
-type Props = {
+export type Props = {
   licenses: License[];
 };
 

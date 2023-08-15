@@ -5,7 +5,7 @@ import IconButton from "@mui/material/IconButton";
 import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
-type Props = {
+export type Props = {
   profile: ProfileType;
 };
 
