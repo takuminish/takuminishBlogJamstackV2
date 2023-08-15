@@ -24,13 +24,11 @@ function ProductCard(props: Props) {
         <Typography gutterBottom variant="h6" component="div">
           {product.name}
         </Typography>
-        <Typography variant="body1" color="text.secondary">
-          <span
-            dangerouslySetInnerHTML={{
-              __html: product.detailedInformation,
-            }}
-          ></span>
-        </Typography>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: product.detailedInformation,
+          }}
+        ></div>
         <Box
           sx={{
             display: "flex",

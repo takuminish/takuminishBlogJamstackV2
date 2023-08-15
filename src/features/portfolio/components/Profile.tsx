@@ -22,13 +22,11 @@ function Profile(props: Props) {
       <Typography variant="h4" sx={{ fontWeight: 700, textAlign: "center" }}>
         {profile.name}
       </Typography>
-      <Typography variant="body1">
-        <span
-          dangerouslySetInnerHTML={{
-            __html: profile.introduction,
-          }}
-        ></span>
-      </Typography>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: profile.introduction,
+        }}
+      ></div>
       <IconButton href={profile.githubUrl}>
         <GitHubIcon />
       </IconButton>

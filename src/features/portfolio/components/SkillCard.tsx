@@ -16,11 +16,7 @@ function SkillCard(props: Props) {
       <Typography variant="h6" sx={{ fontWeight: 700, textAlign: "center" }}>
         {skill.name}
       </Typography>
-      <Typography variant="body1">
-        <span
-          dangerouslySetInnerHTML={{ __html: skill.detailedInfomation }}
-        ></span>
-      </Typography>
+      <div dangerouslySetInnerHTML={{ __html: skill.detailedInfomation }}></div>
     </Paper>
   );
 }
