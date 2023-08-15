@@ -9,6 +9,7 @@ import Tag from "../../shared/components/Tag";
 import { Blog } from "../../features/blogs/types";
 import Layout from "../../shared/components/Layout";
 import ogp from "../../assets/image/takuminish-portfolio-blogs-ogp.png";
+import "github-markdown-css/github-markdown-light.css";
 
 type DataProps = {
   markdownRemark: Blog;
@@ -55,11 +56,11 @@ const BlogDetailPage = ({ data: { markdownRemark } }: PageProps<DataProps>) => {
           </ValueWrapper>
         </Box>
         <article className="markdown-body">
-          <span
+          <div
             dangerouslySetInnerHTML={{
               __html: markdownRemark.html,
             }}
-          ></span>
+          ></div>
         </article>
       </Box>
     </Layout>
