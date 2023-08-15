@@ -1,5 +1,5 @@
 import Typography from "@mui/material/Typography";
-import { format } from "date-fns";
+import { formatInTimeZone } from "date-fns-tz";
 import React from "react";
 
 type Props = {
@@ -12,7 +12,7 @@ function DateText(props: Props) {
 
   return (
     <Typography variant="body2" color="text.secondary">
-      {label}: {format(date, "yyyy/MM/dd")}
+      {label}: {formatInTimeZone(date, "Asia/Tokyo", "yyyy/MM/dd")}
     </Typography>
   );
 }
