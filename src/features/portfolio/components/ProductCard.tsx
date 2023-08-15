@@ -7,7 +7,7 @@ import React from "react";
 import Tag from "../../../shared/components/Tag";
 import Box from "@mui/material/Box";
 
-type Props = {
+export type Props = {
   product: Product;
 };
 

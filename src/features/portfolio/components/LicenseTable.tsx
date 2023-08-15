@@ -9,7 +9,7 @@ import { format } from "date-fns";
 import TableBody from "@mui/material/TableBody";
 import Paper from "@mui/material/Paper";
 
-type Props = {
+export type Props = {
   licenses: License[];
 };
 

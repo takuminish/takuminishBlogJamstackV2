@@ -3,7 +3,7 @@ import React from "react";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import ProductCard from "./ProductCard";
 
-type Props = {
+export type Props = {
   products: Product[];
 };
 
