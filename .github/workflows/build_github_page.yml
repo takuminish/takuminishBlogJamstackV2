@@ -82,6 +82,8 @@ jobs:
             ${{ runner.os }}-gatsby-build-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      - name: test
+        run: ${{ steps.detect-package-manager.outputs.manager }} run test 
       - name: Build with Gatsby
         env:
           PREFIX_PATHS: 'true'
