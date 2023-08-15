@@ -1,0 +1,89 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`snapshot 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-mumbnf-MuiPaper-root-MuiCard-root"
+  >
+    <a
+      class="MuiButtonBase-root MuiCardActionArea-root css-1oitmrd-MuiButtonBase-root-MuiCardActionArea-root"
+      href="/123"
+      tabindex="0"
+    >
+      <div
+        class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      >
+        <div
+          class="MuiBox-root css-l57rop"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
+          >
+            【アルゴリズム】繰り返し二乗法
+          </h6>
+          <p
+            class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+          >
+            冪乗を高速に計算するアルゴリズム 計算量O(logn)
+          </p>
+        </div>
+        <div
+          class="MuiBox-root css-l57rop"
+        >
+          <div
+            class="MuiBox-root css-0"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-1gtxin7-MuiSvgIcon-root"
+              data-testid="FolderIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"
+              />
+            </svg>
+            <span
+              class="MuiBox-root css-9vtw2v"
+            >
+              アルゴリズム
+            </span>
+          </div>
+          <div
+            class="MuiBox-root css-1l50nvy"
+          >
+            <span
+              class="MuiBox-root css-1kcf2o3"
+            >
+              競プロ
+            </span>
+            <span
+              class="MuiBox-root css-1kcf2o3"
+            >
+              アルゴリズム
+            </span>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-l57rop"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+          >
+            createdAt
+            : 
+            2020/10/31
+          </p>
+        </div>
+      </div>
+      <span
+        class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+      />
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </a>
+  </div>
+</div>
+`;

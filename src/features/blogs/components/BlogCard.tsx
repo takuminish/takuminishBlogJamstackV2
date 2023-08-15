@@ -12,7 +12,7 @@ import { BlogMetaData } from "../types";
 import { Link } from "gatsby";
 import Button from "@mui/material/Button";
 
-type Props = {
+export type Props = {
   metaData: BlogMetaData;
 };
 
