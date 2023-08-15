@@ -21,7 +21,7 @@ function BlogCard(props: Props) {
 
   return (
     <Card sx={{ backgroundColor: "#fffff" }}>
-      <CardActionArea LinkComponent={Link} href={metaData.id}>
+      <CardActionArea component={Link} to={metaData.id}>
         <CardContent>
           <ValueWrapper>
             <Typography variant="h6">{metaData.frontmatter.title}</Typography>
@@ -39,7 +39,7 @@ function BlogCard(props: Props) {
               }}
             >
               {metaData.frontmatter.tags.map((tag) => (
-                <Tag text={tag} />
+                <Tag key={tag} text={tag} />
               ))}
             </Box>
           </ValueWrapper>
