@@ -15,7 +15,8 @@
     "clean": "gatsby clean",
     "test": "TZ=Asia/Tokyo vitest",
     "typecheck": "tsc --noEmit",
-    "e2e": "playwright test -c playwright-ct.config.ts"
+    "e2e": "playwright test -c playwright-ct.config.ts",
+    "regression": "npx reg-suit run"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -54,6 +55,10 @@
     "@types/react-dom": "^18.2.6",
     "@vitejs/plugin-react": "^4.0.4",
     "jsdom": "^22.1.0",
+    "reg-keygen-git-hash-plugin": "^0.12.2",
+    "reg-notify-github-plugin": "^0.12.2",
+    "reg-publish-s3-plugin": "^0.12.2",
+    "reg-suit": "^0.12.2",
     "typescript": "^5.1.6",
     "vitest": "^0.34.1"
   }
