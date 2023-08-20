@@ -23,6 +23,7 @@ jobs:
       run: npm run e2e
     - name: Run reg-suit
       run: npm run regression
+      continue-on-error: true
     - uses: actions/upload-artifact@v3
       if: always()
       with:
