@@ -76,3 +76,6 @@ src/gatsby-types.d.ts
 /test-results/
 /playwright-report/
 /playwright/.cache/
+/test-results/
+/playwright-report/
+/playwright/.cache/
