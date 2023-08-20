@@ -6,6 +6,8 @@ on:
     branches: [ main, master ]
 env:
   MICROCMS_APIKEY: ${{secrets.MICROCMS_APIKEY}} 
+  S3_BUCKET_NAME: ${{secrets.S3_BUCKET_NAME}} 
+  CLIENT_ID: ${{secrets.CLIENT_ID}} 
 jobs:
   test:
     timeout-minutes: 60

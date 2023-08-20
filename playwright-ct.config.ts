@@ -26,21 +26,6 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    ctViteConfig: {
-      test: {
-        globals: true,
-        environment: 'jsdom',
-        setupFiles: ['./testSetup.ts'],
-        include: ['./**/*.test.(ts|tsx)'],
-        alias: [
-            {
-                find: /.+\.(jpg|jpeg|png|gif|svg|webp|)$/,
-                replacement: './__mocks__/fileMock.js'
-            }
-        ],
-        testTimeout: 100000
-      },
-    }
   },
 
   /* Configure projects for major browsers */
