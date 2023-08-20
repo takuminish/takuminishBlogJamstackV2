@@ -14,7 +14,9 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "TZ=Asia/Tokyo vitest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "e2e": "playwright test -c playwright-ct.config.ts",
+    "regression": "npx reg-suit run"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -38,9 +40,12 @@
     "github-markdown-css": "^5.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.15.0",
     "styled-components": "^5.3.11"
   },
   "devDependencies": {
+    "@playwright/experimental-ct-react": "^1.37.1",
+    "@playwright/test": "^1.37.1",
     "@testing-library/dom": "^9.3.1",
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^14.0.0",
@@ -50,6 +55,10 @@
     "@types/react-dom": "^18.2.6",
     "@vitejs/plugin-react": "^4.0.4",
     "jsdom": "^22.1.0",
+    "reg-keygen-git-hash-plugin": "^0.12.2",
+    "reg-notify-github-plugin": "^0.12.2",
+    "reg-publish-s3-plugin": "^0.12.2",
+    "reg-suit": "^0.12.2",
     "typescript": "^5.1.6",
     "vitest": "^0.34.1"
   }
