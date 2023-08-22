@@ -21,7 +21,7 @@ jobs:
         node-version: 18
     - name: workaround for detached HEAD
       run: |
-        git checkout ${{ github.head_ref }} || git checkout -b ${{ github.head_ref }} && git pull origin ${{ github.head_ref }}
+        git checkout ${{ github.head_ref }} || git checkout -b ${{ github.head_ref }}
     - name: Install dependencies
       run: npm ci
     - name: Install Playwright Browsers
